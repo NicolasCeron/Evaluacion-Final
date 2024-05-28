@@ -4,7 +4,7 @@ package EvaluacionFinal;
 public class Chaqueta extends Componente {
     int numBotones; 
 
-    public Chaqueta(int numBotones, int id, String nombre, String talla, String color, boolean escomunitario, double precio) {
+    public Chaqueta(int id, String nombre, String talla, String color, boolean escomunitario, double precio, int numBotones) {
         super(id, nombre, talla, color, escomunitario, precio);
         this.numBotones = numBotones;
     }
@@ -19,16 +19,8 @@ public class Chaqueta extends Componente {
 
     @Override
     public String toString() {
-        return " Chaqueta{" + 
-                "\n id= " + id + 
-                "\n nombre= " + nombre + 
-                "\n talla= " + talla + 
-                "\n color= " + color + 
-                "\n es comunitario= " + escomunitario + 
-                "\n precio= " + precio +
-                "\n numero de botones= " + numBotones +
-                "\n}";
-
+        return super.toString()+"Chaqueta{" + "numBotones=" + numBotones + '}';
     }
+
     
 }

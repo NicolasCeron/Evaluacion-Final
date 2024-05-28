@@ -5,7 +5,7 @@ package EvaluacionFinal;
 public class Pantalon extends Componente {
     boolean conCremallera;
 
-    public Pantalon(boolean conCremallera, int id, String nombre, String talla, String color, boolean escomunitario, double precio) {
+    public Pantalon(int id, String nombre, String talla, String color, boolean escomunitario, double precio, boolean conCremallera) {
         super(id, nombre, talla, color, escomunitario, precio);
         this.conCremallera = conCremallera;
     }
@@ -20,14 +20,8 @@ public class Pantalon extends Componente {
 
     @Override
     public String toString() {
-        return  "Pantalon en almacen{" + 
-                "\n id= " + id + 
-                "\n nombre= " + nombre + 
-                "\n talla= " + talla + 
-                "\n color= " + color + 
-                "\n es comunitario= " + escomunitario + 
-                "\n precio= " + precio +
-                "\n conCremallera=" + conCremallera + '}';
+        return super.toString()+"Pantalon{" + "conCremallera=" + conCremallera + '}';
     }
+
     
 }

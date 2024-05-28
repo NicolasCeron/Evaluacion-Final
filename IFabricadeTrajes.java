@@ -3,12 +3,11 @@ package EvaluacionFinal;
 
 public interface IFabricadeTrajes {
 
-    public void añadirComponenteAAlmacen();
+    public void anadirComponenteAAlmacen()throws Exception;
     public void listarComponentes();
-    public void añadirTrajeAAlmacen();
+    public void anadirTrajeAAlmacen()throws Exception;
     public void listarTrajes();
     public void activarDesactivarRebajas();
-    public void crearEnvío();
-    public void consultarEnvio();    
+    public void crearEnvío()throws Exception;
  }   
 

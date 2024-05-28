@@ -2,9 +2,9 @@
 package EvaluacionFinal;
 
 public class Blusa extends Componente {
-    boolean mangaLarga;
+    private boolean mangaLarga;
 
-    public Blusa(boolean mangaLarga, int id, String nombre, String talla, String color, boolean escomunitario, double precio) {
+    public Blusa(int id, String nombre, String talla, String color, boolean escomunitario, double precio, boolean mangaLarga) {
         super(id, nombre, talla, color, escomunitario, precio);
         this.mangaLarga = mangaLarga;
     }
@@ -19,15 +19,6 @@ public class Blusa extends Componente {
 
     @Override
     public String toString() {
-        return  "\n Blusa en almacen:" + 
-                "\n id= " + id + 
-                "\n nombre= " + nombre + 
-                "\n talla= " + talla + 
-                "\n color= " + color + 
-                "\n es comunitario= " + escomunitario + 
-                "\n precio= " + precio +
-                "\n mangaLarga=" + mangaLarga+ 
-                " ";
-        
-    }    
+        return super.toString() + "Blusa{" + "mangaLarga=" + mangaLarga + '}';
+    } 
 }

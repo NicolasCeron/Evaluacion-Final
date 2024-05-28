@@ -8,7 +8,7 @@ public class Componente {
     String nombre;
     String talla;
     String color;
-    boolean escomunitario;
+    boolean esComunitario;
     double precio;
 
     public Componente(int id, String nombre, String talla, String color, boolean escomunitario, double precio) {
@@ -16,10 +16,11 @@ public class Componente {
         this.nombre = nombre;
         this.talla = talla;
         this.color = color;
-        this.escomunitario = escomunitario;
+        this.esComunitario = escomunitario;
         this.precio = precio;
     }
-
+    //getters y setters
+    
     public int getId() {
         return id;
     }
@@ -54,11 +55,11 @@ public class Componente {
     }
 
     public boolean isEscomunitario() {
-        return escomunitario;
+        return esComunitario;
     }
 
     public void setEscomunitario(boolean escomunitario) {
-        this.escomunitario = escomunitario;
+        this.esComunitario = escomunitario;
     }
 
     public double getPrecio() {
@@ -75,26 +76,35 @@ public class Componente {
                 ", nombre=" + nombre + 
                 ", talla=" + talla + 
                 ", color=" + color + 
-                ", escomunitario=" + escomunitario + 
+                ", escomunitario=" + esComunitario + 
                 ", precio=" + precio +
                 '}';
     }
-
-   
+//creamos equals   
     @Override
-    public boolean equals(Object id) { 
-        if (this == id) return true; 
-        if (id == null || getClass() != id.getClass()) return false; 
-        Componente componente = (Componente)id; 
-        return getId() == componente.getId(); }
-   
+    public boolean equals(Object obj) { 
+        if (this == obj) {
+            return true;
+        } 
+        if (obj == null) {
+            return false;
+        }
+            
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Componente other = (Componente)obj;
+            return this.id == other.id; 
+    }
 
     @Override
-       public int hashCode() {
-           return Objects.hash(getId());
-       }
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + this.id;
+        return hash;
+    }
 
-    public int compareTo(Componente o) {
-        return Integer.compare(getId(), o.getId());
+    public int compareTo(EvaluacionFinal.Componente componente) {
+        return Integer.compare(getId(), componente.getId());
     }
 }

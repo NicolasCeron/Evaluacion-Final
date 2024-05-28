@@ -3,13 +3,11 @@ package EvaluacionFinal;
 
 import java.util.ArrayList;
 
-public class Traje {
+public class Traje implements Comparable<Traje>{
     ArrayList<Componente> piezas;
     String nombre;
 
-    public Traje(ArrayList<Componente> piezas) {
-        this.piezas = piezas;
-        this.nombre = nombre;
+    public Traje() {
     }
 
     public ArrayList<Componente> getPiezas() {
@@ -34,5 +32,10 @@ public class Traje {
                 "piezas=" + piezas + 
                 ", nombre=" + nombre + 
                 '}';
+    }
+
+    @Override
+    public int compareTo(Traje traje) {
+        return nombre.compareTo(traje.getNombre());
     }
 }

@@ -2,7 +2,7 @@
 package EvaluacionFinal;
 
 public class Falda extends Componente{
-    boolean conCremallera;
+    private boolean conCremallera;
 
     public Falda(int id, String nombre, String talla, String color, boolean escomunitario, double precio, boolean conCremallera) {
         super(id, nombre, talla, color, escomunitario, precio);
@@ -19,16 +19,10 @@ public class Falda extends Componente{
 
     @Override
     public String toString() {
-        return  " Falda{" + 
-                "\n id= " + id + 
-                "\n nombre= " + nombre + 
-                "\n talla= " + talla + 
-                "\n color= " + color + 
-                "\n es comunitario= " + escomunitario + 
-                "\n precio= " + precio +
-                "\n Tiene Cremallera?= " + conCremallera +
-                "\n}";
+        return super.toString() + "Falda{" + "conCremallera=" + conCremallera + '}';
     }
+
+    
 
     
  
